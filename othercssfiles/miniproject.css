@@ -1,0 +1,134 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.hero-sect{
+ width: 100%;
+ margin: auto;
+  padding: 20px;
+  background-color: rgb(7, 7, 56);
+}
+.sect-text h1{
+color: #a9d9ec;
+padding-bottom: 20px;
+font-size: 60px;
+font-weight: 400;text-align: center;
+
+}
+.cards{
+  display: flex;
+  gap: 3em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card1{
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px #A9D9EC;
+}
+
+.card1-img{
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+  
+.card1 p{
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 100;
+  
+}
+.card2{
+  
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px #A9D9EC;
+}
+.card2-img{
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+.card3{
+    
+  width: 400px;
+  height: 400px;
+   border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px #A9D9EC;
+}
+.card3-img{
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+.card4{
+  
+  width: 400px;
+  height: 400px;
+   border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px #A9D9EC;
+}
+.card4-img{
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+.card5{
+    
+  width: 400px;
+  height: 400px;
+   border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px #A9D9EC;
+}
+.card5-img{
+  border-radius: 10px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+@media(max-width: 581px) {
+  .hero-sect{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .cards{
+    width: 300px;
+  }
+ .card1-img{
+width: 300px;
+  }
+   .card2-img{
+width: 300px;
+height: 200px;
+  }
+     .card3-img{
+width: 300px;
+height: 200px;
+  }
+     .card4-img{
+width: 300px;
+height: 200px;
+  }
+       .card4-img{
+width: 300px;
+height: 200px;
+  }
+}
+@media(max-width: 367px) {
+  .sect-text h1{
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,256 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+header {
+  border: 2px solid black;
+  background-color: #f4f4ed;
+  padding: 16px;
+  border: none;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.left-side{
+  display: flex;
+  gap: 2em;
+}
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.header-list a {
+  color: #3d3d4e;
+  font-size: 16px;
+  font-weight: 400;
+}
+list1{
+  position: relative;
+}
+.about:hover{
+  color: #69C4E9;
+}
+.dropdown{
+  display: none;
+}
+.list1:hover .dropdown{
+  /* border: 2px solid red; */
+  display: block;
+  position: absolute;
+  padding: 2px;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+}
+.dropdown ul{
+  width: auto;
+  padding: 2px;
+}
+.dropdown ul li{
+  padding: 10px;
+}
+.dropdown li:hover{ 
+  background-color: lightgrey;
+}
+.dropdown2{
+  display: none;
+}
+.companies:hover{
+color: #69C4E9;
+}
+.list2:hover .dropdown2{
+  /* border: 2px solid red; */
+  display: block;
+  position: absolute;
+  padding: 2px;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+}
+.dropdown2 ul{
+  width: auto;
+  padding: 2px;
+}
+.dropdown2 ul li{
+  padding: 10px;
+}
+.dropdown2 li:hover{ 
+  background-color: lightgrey;
+}
+.dropdown3{
+  display: none;
+}
+.startupjobs:hover{
+color: #69C4E9;
+}
+.list3:hover .dropdown3{
+  /* border: 2px solid red; */
+  display: block;
+  position: absolute;
+  padding: 2px;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+}
+.dropdown3 ul{
+  width: auto;
+  padding: 2px;
+}
+.dropdown3 ul li{
+  padding: 10px;
+}
+.dropdown3 li:hover{ 
+  background-color: lightgrey;
+}
+.findacofounder:hover{
+color: #69C4E9;
+}
+.libraries:hover{
+color: #69C4E9;
+}.safe:hover{
+color: #69C4E9;
+}
+.dropdown7{
+  display: none;
+  z-index: 222;
+}
+.resources:hover{
+  color: #69C4E9;
+}
+.list7:hover .dropdown7{
+  /* border: 2px solid red; */
+  display: block;
+  position: absolute;
+  padding: 2px;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+}
+.dropdown7 ul{
+  width: auto;
+  padding: 2px;
+}
+.dropdown7 ul li{
+  padding: 10px;
+}
+.dropdown7 li:hover{ 
+  background-color: lightgrey;
+}
+.right-side {
+  display: flex;
+  gap: 1em; 
+}
+.right-side span {
+  padding-top: 10px;
+}
+.right-side button {
+  background-color: #ee5d19;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+.right-side button a {
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+}
+.fa-solid{
+  display: none;
+}
+.hero-sect {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+  border: none;
+  /* width: 90%; */
+}
+
+/* /* } */
+.first-text {
+  margin: auto;
+  padding-bottom: 10px;
+}
+.first-text h1 {
+  font-size: 60px;
+  color: #ee5d19;
+}
+.first-text p {
+  font-size: 26px; 
+   font-weight: 200;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.first-text button {
+  width: 180px;
+  padding: 10px;
+  background-color: #ee5d19;
+  border-radius: 10px;
+  border: none;
+}
+.first-text button a {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.left-img{
+    position: relative;
+} */
+.another-sect {
+  border: 2px solid black;
+  padding: 20px;
+}
+.cards{
+    position: absolute;
+}
+ .card1 {
+  width: 200px;
+  height: 100px;
+  border: thin solid black;
+  border-radius: 20px;
+  position: absolute;
+  top: -350px;
+  left: 665px;
+  background-color: #F5F5EE;
+  border: none;
+}
+.card1 h1{
+ margin-left: 50px;
+ margin-top: 20px;
+ color: #ee5d19;
+}
+.card1 p{
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.card2 {
+  width: 200px;
+  height: 100px;
+  border: thin solid black;
+  border-radius: 20px;
+  position: absolute;
+  top: -200px;
+  left: 665px;
+  background-color: #F5F5EE;
+  border: none;
+}
+.card2 h1{
+     margin-left: 70px;
+ margin-top: 20px;
+ color: #ee5d19;
+}
+.card2 p{
+       margin-left: 50px;
+    margin-bottom: 20px;
+}
+@media(max-width: 1270px) {
+.right-side span{
+  display: none;
+}
+} 

@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+.hero-sect{
+    background-image: url(./images/copy\ school.jpg);
+    height: 100vh;
+    width: 100%;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+.hero-text{
+  
+  width: 100%;
+  height: 100vh;
+  padding: 40px;
+  background-color: white;
+  opacity: 0.3;
+}
+.text{
+  
+  position: absolute;
+  top: 200px;
+  left: 220px;
+  text-align: center;}
+.text h1{
+  color: rgb(2, 2, 48);
+  font-size: 3em;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+.text p{
+color: brown;
+font-style: italic;
+font-size: 2em;
+font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 725px) {
+    .first-text{
+        font-size: 2em;
+    }
+}

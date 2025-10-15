@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    border: 2px solid black;
+    width: 1000px;
+    height: 500px;
+    margin:  20px auto;
+    position: relative;
+}
+.box-container{
+    width: 450px;
+    height: 600px;
+    position: absolute;
+    top: 120px;
+    left: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box{
+    width: 400px;
+    height: 250px;
+    border: 10px solid black;
+    background-image: url('/images\ copy/stadium.PNG');
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-color: #88d7ff;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.box:hover{
+background-color: #fff;
+}
+.div2 {
+    display: flex;
+    margin-right: 200px;
+    animation: move 2s ease-in-out infinite ;
+}
+  @keyframes move {
+    from { transform: translateX(0); }
+    to   { transform: translateX(210px); } 
+  }
+.square{
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    background-color: black;
+}
+.circle{
+    width: 150px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 150%;
+    background-color: black;
+}
+.speaker1{
+border: 2px solid black;
+width: 180px;
+height: 320px;
+position: absolute;
+top: 110px;
+left: 40px;
+background-color: black;
+display: flex;
+justify-content: center;
+}
+.speaker2{
+border: 2px solid black;
+width: 180px;
+height: 320px;
+position: absolute;
+top: 110px;
+left: 770px;
+background-color: black;
+display: flex;
+justify-content: center;
+}
+.speaker-circle1, .speaker-circle2 {
+  border: 2px solid black;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+    margin-top: 15px;
+}
+
+.smallcircle1, .smallcircle2 {
+  border: 2px solid black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute; 
+
+}
+
+.smallcircle1, .smallcircle2 {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg) translateX(3px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(3px) rotate(-360deg); }
+}
+
+
+.smallcircle1:hover, .smallcircle2:hover{
+    background-color: rgb(43, 100, 43);
+    cursor: pointer;
+}
