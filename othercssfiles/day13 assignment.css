@@ -163,6 +163,29 @@ color: #69C4E9;
 .fa-solid{
   display: none;
 }
+@media(max-width:864px) {
+  .header-list{
+    display: flex;
+    gap: 1em;
+  }
+  .header-list a{
+    font-size: .8em;
+  }
+  }
+  @media(max-width:674px) {
+    .header-list{
+      display: none;
+    }
+    button{
+      display: none;
+    }
+    .fa-solid{
+      display: block;
+      font-size: 2em;
+      color: #ee5d19;
+    }
+  } 
+
 .hero-sect {
   background-color: #ffffff;
   display: flex;
