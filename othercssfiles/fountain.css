@@ -5,6 +5,9 @@
   list-style-type: none;
   text-decoration: none;
 }
+body{
+  background-color: #ffd166;
+}
 header {
   border: 2px solid black;
   background-color: rgb(54, 3, 3);
@@ -89,7 +92,8 @@ nav {
   padding: 20px;
   text-align: center;
   height: 700px;
-  padding-top: 200px;
+  padding-top: 300px;
+  padding-bottom: 300px;
 }
 .hero-sect h1 {
   font-size: 3em;
