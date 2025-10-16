@@ -57,7 +57,7 @@ nav{
 }
 .hero-sect{
   background-image: linear-gradient(to left,rgb(3, 3, 49), rgb(7, 7, 133),blue, skyblue);
-  height: 80vh;
+  height: 100vh;
 }
 .text{
   text-align: center;
