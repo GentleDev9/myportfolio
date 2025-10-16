@@ -126,6 +126,10 @@ nav{
     margin-left: 10px;
     /* justify-content: center; */
 }
+    body{
+      background-color: darkblue;
+    }
+
       footer{
         background-color: darkblue;
         display: flex;
@@ -150,6 +154,4 @@ nav{
           justify-content: space-between;
         }
       }
-      body{
-        background: linear-gradient(90deg, #4A57A4, #93a0ee);
-      }
+      
