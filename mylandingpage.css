@@ -4,6 +4,7 @@
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
+ 
 }
 header{
   background-color: rgb(10, 10, 88);
@@ -63,16 +64,32 @@ nav{
 }
 
 .text h1{
-  color: rgb(2, 2, 48);
+  color: skyblue;
   font-size: 3em;
   font-style: italic;
   padding-bottom: 20px;
 }
 .text p{
-color: rgb(2, 2, 48);
+color: skyblue;
 font-style: italic;
 font-size: 2em;
 font-weight: 600;
+}
+@media(max-width: 878px) {
+  .text h1{
+    font-size: 2em;
+  }
+  .text p{
+    font-size: 1.2em;
+  }
+}
+@media(max-width: 534px) {
+  .text h1{
+    font-size: 1.6em;
+  }
+  .text p{
+    font-size: .9em;
+  }
 }
       footer{
         background-color: darkblue;
@@ -80,4 +97,21 @@ font-weight: 600;
         justify-content: space-between;
         color:  skyblue;
         padding: 15px 30px;
+      }
+      @media(max-width:648px) {
+        footer p{
+          font-size: .8em;
+        }
+      }
+      @media(max-width: 534px) {
+        footer p{
+          font-size: .6em;
+        }
+      }
+      @media(max-width: 416px) {
+        footer p{
+          font-size: .5em;
+          display: grid;
+          justify-content: space-between;
+        }
       }
