@@ -5,9 +5,11 @@
     list-style-type: none;
     text-decoration: none;
 }
+body{
+    background-color: blue;
+}
 section{
     background-color: blue;
-    padding: 200px;
 }
 h1{
    background-color: rgb(138, 138, 252);
@@ -15,6 +17,7 @@ h1{
    color: blue;
    /* padding: 20px; */
    font-style: italic;
+   width: 100%;
 }
 p{
    background-color: rgb(138, 138, 252);
@@ -22,6 +25,7 @@ p{
    color: blue;
    font-size: 2em;
    font-style: italic;
+   width: 100%;
 }
 .inputs{
     display: flex;
