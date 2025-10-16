@@ -4,7 +4,7 @@ margin: 0;
 box-sizing: border-box;
 }
 body{
-  background-color: darkblue;
+  background-color: rgb(7, 7, 56);
 }
 .hero-sect{
  width: 100%;
