@@ -10,7 +10,9 @@ body{
 }
 section{
     background-color: blue;
+    padding: 200px;
 }
+
 h1{
    background-color: rgb(138, 138, 252);
    text-align: center;
