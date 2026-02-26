@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        font-size: 3em;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        gap: 1.5em;
+    }
+    button{
+        padding: 12px 24px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+</style>
+<body>
+    
+    <h1>Guess The Number</h1>
+    
+    <div>
+    <input type="text" id="input">
+    <button onclick="guessNumber()">guess</button>
+   </div>
+</body>
+<script>
+    let input = "";
+let randomNumber = Math.floor(Math.random() * 10+1)
+   console.log(randomNumber);
+function guessNumber(){
+    
+ input = Number(document.getElementById("input").value);
+
+
+if (input == ""){
+alert("Input a number to start your game")
+}
+ else if (input  == randomNumber){
+alert ("congratulations, you guessed correctly")
+
+}
+else if (input < randomNumber){
+alert("Try a greater number")
+}
+else if (input > randomNumber){
+alert ("Try a lesser number")
+}
+else{
+alert ("Invalid")
+}
+  input = ""; 
+
+}
+</script>
+</html>

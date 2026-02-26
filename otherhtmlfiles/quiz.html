@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .quiz-wrapper{
+        border: thin solid black;
+        border-radius: 10px;
+        width: 60%;
+        margin: 70px auto;
+    }
+    h1{
+        text-align: center;
+        font-size: 4em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .btns{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+        margin-bottom: 10px;
+       
+    }
+
+    .btns button{
+ padding: 10px 30px;
+border: none;
+color: white;
+border-radius: 5px;
+background-color: blue;
+   font-size: 1em;
+        font-weight: 400;
+    }
+    .submit{
+        margin: auto;
+        padding: 10px;
+    }
+    .submit button{
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+        background-color: green;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 1.3em;
+        font-weight: 600;
+        
+    }
+    .question-box{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+
+</style>
+<body>
+    <div class="quiz-wrapper">
+    <h1>Quiz App</h1>
+<p id="score"></p>
+<div class="question-box">
+    <p id="showQuestions"></p>
+
+    <div class="options">
+ <div class="option">
+        <input type="radio" name="answer" id="option1">
+        <span id="text1"></span>
+    </div>
+    <div class="option">
+        <input type="radio" name="answer" id="option2">
+        <span id="text2"></span>
+    </div>
+    <div class="option">
+        <input type="radio" name="answer" id="option3">
+        <span id="text3"></span>
+    </div>
+    <div class="option">
+        <input type="radio" name="answer" id="option4">
+        <span id="text4"></span>
+    </div>
+    </div>
+</div>
+
+
+<div class="btns">
+<button id="prevBtn" onclick="previous()">Prev</button>
+<button id="nextBtn" onclick="next()">Next</button>
+</div>
+<div class="submit">
+    <button onclick="submitQuiz()">submit</button>
+</div>
+
+
+</div>
+</body>
+<script>
+
+let currentQuestion = 0;
+let score = 0;
+
+let scoreDisplay = document.getElementById("score");
+let showQuestions = document.getElementById('showQuestions');
+
+let text1 = document.getElementById("text1");
+let text2 = document.getElementById("text2");
+let text3 = document.getElementById("text3");
+let text4 = document.getElementById("text4");
+
+let option1 = document.getElementById("option1");
+let option2 = document.getElementById("option2");
+let option3 = document.getElementById("option3");
+let option4 = document.getElementById("option4");
+
+const questions = [
+    { question: "What is 2 + 2?", options: ["2","3","4","5"], answer: "4" },
+    { question: "What is the capital of Nigeria?", options: ["Lagos","Abuja","Kano","Ibadan"], answer: "Abuja" },
+    { question: "What is the holy book of Islam?", options: ["Bible","Torah","Qur'an","Psalms"], answer: "Qur'an" },
+    { question: "Which programming language works with HTML and CSS?", options: ["Python","JavaScript","C++","Java"], answer: "JavaScript" },
+    { question: "How many pillars of Islam are there?", options: ["3","4","5","6"], answer: "5" },
+    { question: "What is the capital of France?", options: ["Berlin","Madrid","Paris","Rome"], answer: "Paris" },
+    { question: "Which planet is called the Red Planet?", options: ["Mars","Venus","Jupiter","Saturn"], answer: "Mars" },
+    { question: "Who created Microsoft?", options: ["Steve Jobs","Bill Gates","Mark Zuckerberg","Elon Musk"], answer: "Bill Gates" },
+    { question: "What does HTML stand for?", options: ["HyperText Markup Language","HighText Machine Language","Hyperlink Text Mode Language","Home Tool Markup Language"], answer: "HyperText Markup Language" },
+    { question: "What is the largest ocean?", options: ["Atlantic","Indian","Pacific","Arctic"], answer: "Pacific" },
+    { question: "Which country is known as the Land of the Rising Sun?", options: ["China","Japan","Thailand","India"], answer: "Japan" },
+    { question: "What is the hardest natural substance?", options: ["Gold","Diamond","Iron","Silver"], answer: "Diamond" },
+    { question: "How many continents are there?", options: ["5","6","7","8"], answer: "7" },
+    { question: "What does CPU stand for?", options: ["Central Processing Unit","Computer Power Unit","Control Program Utility","Central Print Unit"], answer: "Central Processing Unit" },
+    { question: "Which animal is the fastest on land?", options: ["Lion","Cheetah","Tiger","Leopard"], answer: "Cheetah" },
+    { question: "Which Surah is recited in every unit of prayer?", options: ["Al-Fatiha","Al-Ikhlas","Yasin","Al-Baqarah"], answer: "Al-Fatiha" },
+    { question: "What is the meaning of Zakat?", options: ["Fasting","Charity","Prayer","Pilgrimage"], answer: "Charity" },
+    { question: "Which company made Windows?", options: ["Apple","Microsoft","Google","IBM"], answer: "Microsoft" },
+    { question: "What is the largest mammal?", options: ["Elephant","Blue Whale","Giraffe","Hippo"], answer: "Blue Whale" },
+    { question: "Which language is spoken in Brazil?", options: ["Spanish","Portuguese","French","English"], answer: "Portuguese" }
+];
+
+function displayQuestion() {
+    showQuestions.innerHTML =
+        `Question ${currentQuestion + 1} of ${questions.length}<br><h2> ${questions[currentQuestion].question}</h2>`;
+
+    text1.innerHTML = questions[currentQuestion].options[0];
+    text2.innerHTML = questions[currentQuestion].options[1];
+    text3.innerHTML = questions[currentQuestion].options[2];
+    text4.innerHTML = questions[currentQuestion].options[3];
+
+    clearSelection();
+}
+
+function clearSelection() {
+    option1.checked = false;
+    option2.checked = false;
+    option3.checked = false;
+    option4.checked = false;
+}
+
+function getSelectedAnswer() {
+    if (option1.checked) return text1.innerHTML;
+    if (option2.checked) return text2.innerHTML;
+    if (option3.checked) return text3.innerHTML;
+    if (option4.checked) return text4.innerHTML;
+    return null;
+}
+
+function next() {
+    let selected = getSelectedAnswer();
+    if (selected === questions[currentQuestion].answer) score++;
+
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        displayQuestion();
+    }
+}
+
+function previous() {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        displayQuestion();
+    }
+}
+
+function submitQuiz() {
+    let selected = getSelectedAnswer();
+    if (selected === questions[currentQuestion].answer) score++;
+
+    scoreDisplay.innerHTML = `Your score is ${score}/${questions.length}`;
+}
+
+displayQuestion();
+
+</script>
+</html>
